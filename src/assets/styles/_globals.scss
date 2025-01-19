@@ -1,0 +1,35 @@
+.work-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  row-gap: 40px;
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    row-gap: 20px;
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    grid-gap: 32px;
+    row-gap: 32px;
+
+    &-between {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      grid-gap: 32px;
+      row-gap: 32px;
+    }
+  }
+}

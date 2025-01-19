@@ -1,0 +1,34 @@
+@use "_colors" as *;
+@use "_globals" as *;
+@use "_constants" as *;
+
+@font-face {
+  font-family: ALS Sector;
+  src:  url("../fonts/ASL Sector/ALS_Sector_Regular_2.0.otf");
+}
+
+@font-face {
+  font-family: ALS Sector Bold;
+  src:  url("../fonts/ASL Sector/ALS_Sector_Bold_2.0.otf");
+}
+
+@font-face {
+  font-family: ALS Sector Extra Bold;
+  src:  url("../fonts/ASL Sector/ALS_Sector_Extra Bold_2.0.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: ALS Sector, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--fields-background-action);
+}
