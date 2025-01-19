@@ -16,7 +16,6 @@ interface Props {
   chartData: any;
 }
 
-// Регистрация необходимых модулей Chart.js
 ChartJS.register(
     Title,
     Tooltip,
@@ -31,7 +30,6 @@ ChartJS.register(
 
 const { chartData } = defineProps<Props>()
 
-// Опции графика
 const chartOptions = {
   responsive: true,
   plugins: {

@@ -4,14 +4,10 @@ export function empty<T>(
   // false, null, undefined, 0, ''
   if (!value) return true;
 
-  // считаем что массив пустой, если в нем нет элементов ([])
   if (Array.isArray(value)) return value.length === 0;
 
-  // считаем что объект пустой, если в нем нет свойств ({})
   if (typeof value === 'object') return Object.keys(value).length === 0;
 
-  // в остальных случаях посто приводим к boolean
-  // 'foo', 100, -100
   return !value;
 }
 

@@ -11,7 +11,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'), // Настройка алиаса '@' для папки 'src'
+      '@': resolve(__dirname, 'src'),
     },
   },
 })

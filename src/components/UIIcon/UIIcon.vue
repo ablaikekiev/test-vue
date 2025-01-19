@@ -14,9 +14,9 @@ const icons: Record<string, any> = {
 };
 
 interface IconProps {
-  name: string; // Имя иконки
-  size?: number; // Размер
-  className?: string; // Классы
+  name: string;
+  size?: number;
+  className?: string;
 }
 
 const props = defineProps<IconProps>();

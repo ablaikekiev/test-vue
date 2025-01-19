@@ -8,7 +8,7 @@ import TextEditor from "@/components/TextEditor/TextEditor.vue";
 import PairsChart from "@/content/PairsChart/PairsChart.vue";
 import PairsInfo from "@/content/PairsInfo/PairsInfo.vue";
 
-import { useMarket } from "@/store/coins.ts";
+import { useMarket } from "@/store/market.ts";
 
 import type { Pair } from "@/types/types.ts";
 

@@ -4,7 +4,7 @@ import { onMounted } from "vue";
 import CoinsTable from "@/content/CoinsTable/CoinsTable.vue";
 import UILayout from "@/components/UILayout/UILayout.vue";
 
-import { useMarket } from "@/store/coins.ts";
+import { useMarket } from "@/store/market.ts";
 
 const market = useMarket();
 

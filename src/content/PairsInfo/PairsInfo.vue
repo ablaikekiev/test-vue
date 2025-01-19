@@ -91,6 +91,10 @@ console.log(pair)
 
     padding: 24px 0;
 
+    @media (max-width: 425px) {
+      flex-direction: column;
+    }
+
     &Item {
       padding: 16px 24px;
 

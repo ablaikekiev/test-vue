@@ -6,7 +6,7 @@ import InputField from "@/components/UIInput/UIInput.vue";
 import TextEditor from "@/components/TextEditor/TextEditor.vue";
 import UIIcon from "@/components/UIIcon/UIIcon.vue";
 
-import { useMarket } from "@/store/coins.ts";
+import { useMarket } from "@/store/market.ts";
 
 import type { Coin } from "@/types/types.ts";
 
@@ -30,15 +30,13 @@ watch([debounced], () => {
 </script>
 
 <template>
-  <div>
+  <div class="coinsTable">
     <div class="coinsTableInputWrapper">
       <InputField
           v-model="inputValue"
           placeholder="Search"
           :full-width="true"
       />
-
-      <!--      <Button variant="text">Поиск</Button>-->
     </div>
 
     <div class="coinsTableHeader">
@@ -164,6 +162,9 @@ watch([debounced], () => {
 
 <style scoped lang="scss">
 .coinsTable {
+  @media (max-width: 760px) {
+    overflow: auto;
+  }
 
   &Input {
 
@@ -188,6 +189,20 @@ watch([debounced], () => {
     grid-template-columns: 220px 240px 240px 240px 240px;
 
     padding: 8px;
+
+    min-width: 688px;
+
+    @media (max-width: 1280px) {
+      grid-template-columns: 170px 190px 190px 190px 190px;
+    }
+
+    @media (max-width: 1000px) {
+      grid-template-columns: 160px 140px 140px 140px 140px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 160px 120px 120px 120px 120px;
+    }
 
     &Item {
       display: flex;
@@ -215,6 +230,18 @@ watch([debounced], () => {
       grid-template-columns: 220px 240px 240px 240px 240px;
 
       cursor: pointer;
+
+      @media (max-width: 1280px) {
+        grid-template-columns: 170px 190px 190px 190px 190px;
+      }
+
+      @media (max-width: 1000px) {
+        grid-template-columns: 160px 140px 140px 140px 140px;
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 160px 120px 120px 120px 120px;
+      }
 
       &Item {
         padding: 8px 4px;
@@ -272,6 +299,8 @@ watch([debounced], () => {
 
       &:nth-child(even) {
         background: var(--fields-border-default);
+
+        min-width: 688px;
       }
 
       &:hover {
