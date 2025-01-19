@@ -11,8 +11,6 @@ interface Props {
 }
 
 const { pair } = defineProps<Props>()
-
-console.log(pair)
 </script>
 
 <template>

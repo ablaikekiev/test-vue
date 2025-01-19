@@ -39,10 +39,6 @@ onMounted(() => {
       fill: true
     }]
   }
-
-  console.log(chartData.value)
-
-  console.log(currentPair.value)
 })
 
 </script>
