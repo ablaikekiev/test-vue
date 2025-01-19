@@ -79,8 +79,9 @@ const findCoin = (coin: string) => {
     </div>
 
     <div class="coinsTableBody">
-      <div
+      <RouterLink
           v-for="pair in market.pairs"
+          :to="`/coin/${pair.pair.primary}-${pair.pair.secondary}`"
           class="coinsTableBodyRow"
           :key="'coins-table' + pair.price.bestBid"
       >
@@ -149,7 +150,7 @@ const findCoin = (coin: string) => {
 
           </div>
         </div>
-      </div>
+      </RouterLink>
     </div>
   </div>
 </template>
@@ -205,6 +206,8 @@ const findCoin = (coin: string) => {
 
       display: grid;
       grid-template-columns: 220px 240px 240px 240px 240px;
+
+      cursor: pointer;
 
       &Item {
         padding: 8px 4px;
@@ -262,6 +265,10 @@ const findCoin = (coin: string) => {
 
       &:nth-child(even) {
         background: var(--fields-border-default);
+      }
+
+      &:hover {
+        background: var(--label-teriary);
       }
     }
   }

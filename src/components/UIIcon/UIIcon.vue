@@ -3,12 +3,14 @@ import UserIcon from '@/assets/images/icons/user.svg';
 import CrescentIcon from '@/assets/images/icons/crescent.svg'
 import SunIcon from '@/assets/images/icons/sun.svg'
 import ArrowIncrease from '@/assets/images/icons/arrow-increase.svg'
+import ArrowLeft from '@/assets/images/icons/arrow-left.svg'
 
 const icons: Record<string, any> = {
   user: UserIcon,
   sun: SunIcon,
   crescent: CrescentIcon,
   arrowIncrease: ArrowIncrease,
+  arrowLeft: ArrowLeft,
 };
 
 interface IconProps {

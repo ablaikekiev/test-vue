@@ -5,6 +5,11 @@ const routes = [
     name: 'Dashboard',
     path: '/',
     component: () => import('../pages/dashboard/DashboardPage.vue')
+  },
+  {
+    name: 'CoinDetail',
+    path: '/coin/:pair',
+    component: () => import('../pages/coins-detail/CoinsDetailPage.vue')
   }
 ]
 
