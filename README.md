@@ -24,3 +24,6 @@ npm run build
 npm run preview
 ```
 
+### Link for preview
+
+https://678d6b9088cb310008cbcf84--calm-caramel-f6ae56.netlify.app/
