@@ -1,6 +1,4 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
 <div class="container">
@@ -10,7 +8,7 @@
 
 <style scoped lang="scss">
 .container {
-  width: 1280px;
+  max-width: 1280px;
   margin: 80px auto 0;
 }
 </style>

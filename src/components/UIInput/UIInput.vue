@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import { empty } from "@/utils/empty.ts";
 
 interface Props {

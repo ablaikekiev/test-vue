@@ -1,25 +1,32 @@
 <script setup lang="ts">
+import { ref, watch } from "vue";
+import { useDebounce } from "@vueuse/core";
 
 import InputField from "@/components/UIInput/UIInput.vue";
-import { ref } from "vue";
 import TextEditor from "@/components/TextEditor/TextEditor.vue";
-import { useMarket } from "@/store/coins.ts";
 import UIIcon from "@/components/UIIcon/UIIcon.vue";
+
+import { useMarket } from "@/store/coins.ts";
+
+import type { Coin } from "@/types/types.ts";
 
 const inputValue = ref<string>()
 
 const market = useMarket()
 
-market.getCoins()
-market.getPairs()
-
 const findCoin = (coin: string) => {
-  let icon = market.coins.find(el => el.code === coin)?.icon;
+  let icon = market.marketData.coins.find((el: Coin) => el.code === coin)?.icon;
 
   if (icon) {
     return atob(icon).replace('<svg', '<svg width="24" height="24"');
   }
 }
+
+const debounced = useDebounce(inputValue, 500);
+
+watch([debounced], () => {
+  market.sortPairs(debounced.value)
+})
 </script>
 
 <template>
@@ -80,7 +87,7 @@ const findCoin = (coin: string) => {
 
     <div class="coinsTableBody">
       <RouterLink
-          v-for="pair in market.pairs"
+          v-for="pair in market.marketData.pairs"
           :to="`/coin/${pair.pair.primary}-${pair.pair.secondary}`"
           class="coinsTableBodyRow"
           :key="'coins-table' + pair.price.bestBid"

@@ -1,13 +1,9 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue';
+
 import UIIcon from "@/components/UIIcon/UIIcon.vue";
 
-
 const currentTheme = ref();
-
-onMounted(() => {
-  currentTheme.value = localStorage.getItem('theme') || 'light'
-})
 
 const toggleTheme = () => {
   currentTheme.value = currentTheme.value === 'light' ? 'dark' : 'light';
@@ -22,7 +18,9 @@ watch(currentTheme, (newTheme) => {
   localStorage.setItem('theme', newTheme);
 });
 
-document.documentElement.className = currentTheme.value;
+onMounted(() => {
+  currentTheme.value = localStorage.getItem('theme') || 'light'
+})
 </script>
 
 <template>

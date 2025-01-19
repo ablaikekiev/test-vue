@@ -1,20 +1,23 @@
 <script setup lang="ts">
-import CoinsTable from "@/content/CoinsTable/CoinsTable.vue";
-import UIButton from "@/components/UIButton/UIButton.vue";
-import UILayout from "@/components/UILayout/UILayout.vue";
-import { useMarket } from "@/store/coins.ts";
 import { onMounted } from "vue";
 
+import CoinsTable from "@/content/CoinsTable/CoinsTable.vue";
+import UILayout from "@/components/UILayout/UILayout.vue";
+
+import { useMarket } from "@/store/coins.ts";
+
 const market = useMarket();
+
+onMounted(() => {
+  market.getCoins()
+  market.getPairs()
+})
 </script>
 
 <template>
-<UILayout>
-  <CoinsTable />
-
-  <UIButton variant="filled">blabla</UIButton>
-<!--  <ChartsPeriodView />-->
-</UILayout>
+  <UILayout>
+    <CoinsTable/>
+  </UILayout>
 </template>
 
 <style scoped>

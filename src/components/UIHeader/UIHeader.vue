@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import UserIcon from '@/assets/images/icons/user.svg'
 import ThemeSwitcher from "@/components/ThemeSwitcher/ThemeSwitcher.vue";
 import UIIcon from "@/components/UIIcon/UIIcon.vue";
 

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^12.4.0",
     "axios": "^1.7.9",
     "chart.js": "^3.9.1",
     "pinia": "^2.3.0",
@@ -22,6 +23,7 @@
     "@typescript-eslint/eslint-plugin": "^8.20.0",
     "@typescript-eslint/parser": "^8.20.0",
     "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/runtime-core": "^3.5.13",
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.18.0",
     "eslint-plugin-import": "^2.31.0",
